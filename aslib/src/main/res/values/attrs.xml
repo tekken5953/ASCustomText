@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="AsTextView">
+        <attr name="sort" format="string">
+            <enum name="grade" value="0"/>
+            <enum name="pm" value="1"/>
+            <enum name="co" value="2"/>
+            <enum name="co2" value="3"/>
+            <enum name="tvoc" value="4"/>
+            <enum name="virus" value="5"/>
+            <enum name="cqi" value="6"/>
+        </attr>
+    </declare-styleable>
+</resources>

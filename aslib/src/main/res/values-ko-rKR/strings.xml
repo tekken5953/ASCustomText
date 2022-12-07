@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">CustomTextView</string>
+    <string name="good">좋음</string>
+    <string name="normal">보통</string>
+    <string name="bad">나쁨</string>
+    <string name="very_bad">매우나쁨</string>
+    <string name="error">에러</string>
+</resources>
