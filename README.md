@@ -17,7 +17,7 @@ pluginManagement {
 
 ```
 dependencies {
-	        implementation 'com.github.tekken5953:AsCustomTextView:[최신버전태그]'
+	        implementation 'com.github.tekken5953:AsCustomText:[최신버전태그]'
 	}
 ```
 

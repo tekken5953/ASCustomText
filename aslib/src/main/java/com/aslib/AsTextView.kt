@@ -14,7 +14,7 @@ class AsTextView(context: Context, attrs: AttributeSet) : AppCompatTextView(cont
 
     init {
         val sort: TypedArray = context.obtainStyledAttributes(attrs,R.styleable.AsTextView)
-        sortResult = sort.getInt(R.styleable.AsTextView_sort,0)
+        sortResult = sort.getInt(R.styleable.AsTextView_sort,-1)
         // 데이터를 캐싱해두어 가비지컬렉션에서 제외시키도록 하는 함수
         // typedArray 사용 후 호출해야하나, 커스텀뷰가 반복 사용되는 것이 아니라면 호출하지 않아도 무방하다.
         sort.recycle()
@@ -49,7 +49,7 @@ class AsTextView(context: Context, attrs: AttributeSet) : AppCompatTextView(cont
         this.visibility = VISIBLE
         val indexFloat = index.toFloat()
         val indexInt = index.toInt()
-        Log.d("AsTextView","sortResult is " + sortResult)
+        Log.d(javaClass.name, "sortResult is $sortResult")
         when(sortResult) {
             // PM
             1 -> {
@@ -129,9 +129,10 @@ class AsTextView(context: Context, attrs: AttributeSet) : AppCompatTextView(cont
                 }
             }
         }
-        if (sortResult == 0) {
-            this.text = "sort option is grade. fix it"
-            this.setTextColor(ResourcesCompat.getColor(context.resources, android.R.color.holo_red_dark, null))
+        if (sortResult !in 1..5) {
+            this.text = "error"
+            this.setTextColor(ResourcesCompat.getColor(context.resources, android.R.color.holo_red_light, null))
+            Log.e(javaClass.name,"sort option is not index")
         }
         this.text = index
     }
@@ -162,8 +163,8 @@ class AsTextView(context: Context, attrs: AttributeSet) : AppCompatTextView(cont
                 }
             }
         } else {
-            this.text = "sort option is not grade"
-            this.setTextColor(ResourcesCompat.getColor(context.resources, android.R.color.holo_red_dark, null))
+            this.text = grade
+            Log.e(javaClass.name,"sort option is not grade")
         }
     }
 }
