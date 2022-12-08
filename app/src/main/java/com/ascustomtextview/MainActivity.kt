@@ -1,7 +1,8 @@
 package com.ascustomtextview
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import com.aslib.AsTextView
 
 class MainActivity : AppCompatActivity() {
@@ -10,6 +11,8 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         val asTextView: AsTextView = findViewById(R.id.asTextView)
-        asTextView.setGradeText("1")
+        asTextView.setSort("co2")
+        asTextView.setIndexText("1200")
+        Toast.makeText(this, asTextView.getSort(), Toast.LENGTH_SHORT).show();
     }
 }

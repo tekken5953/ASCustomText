@@ -4,6 +4,7 @@ import android.annotation.SuppressLint
 import android.content.Context
 import android.content.res.TypedArray
 import android.util.AttributeSet
+import android.util.Log
 import androidx.appcompat.widget.AppCompatTextView
 import androidx.core.content.res.ResourcesCompat
 
@@ -48,9 +49,10 @@ class AsTextView(context: Context, attrs: AttributeSet) : AppCompatTextView(cont
         this.visibility = VISIBLE
         val indexFloat = index.toFloat()
         val indexInt = index.toInt()
+        Log.d("AsTextView","sortResult is " + sortResult)
         when(sortResult) {
             // PM
-             1 -> {
+            1 -> {
                 if (indexFloat in 0f..15f) {
                     this.setTextColor(ResourcesCompat.getColor(context.resources, R.color.progressGood, null))
                 }
@@ -79,7 +81,7 @@ class AsTextView(context: Context, attrs: AttributeSet) : AppCompatTextView(cont
                     this.setTextColor(ResourcesCompat.getColor(context.resources, R.color.progressWorst, null))
                 else
                     this.setTextColor(ResourcesCompat.getColor(context.resources, R.color.progressError, null))
-           }
+            }
             // CO2
             3 -> {
                 if (indexFloat in 0f..500f)
@@ -95,16 +97,16 @@ class AsTextView(context: Context, attrs: AttributeSet) : AppCompatTextView(cont
             }
             // TVOC
             4 -> {
-                    if (indexFloat in 0f..0.25f)
-                        this.setTextColor(ResourcesCompat.getColor(context.resources, R.color.progressGood, null))
-                    else if (indexFloat > 0.25f && indexFloat <= 0.5f)
-                        this.setTextColor(ResourcesCompat.getColor(context.resources, R.color.progressNormal, null))
-                    else if (indexFloat > 0.5f && indexFloat <= 0.6f)
-                        this.setTextColor(ResourcesCompat.getColor(context.resources, R.color.progressBad, null))
-                    else if (indexFloat > 0.6f && indexFloat <= 3f)
-                        this.setTextColor(ResourcesCompat.getColor(context.resources, R.color.progressWorst, null))
-                    else
-                        this.setTextColor(ResourcesCompat.getColor(context.resources, R.color.progressError, null))
+                if (indexFloat in 0f..0.25f)
+                    this.setTextColor(ResourcesCompat.getColor(context.resources, R.color.progressGood, null))
+                else if (indexFloat > 0.25f && indexFloat <= 0.5f)
+                    this.setTextColor(ResourcesCompat.getColor(context.resources, R.color.progressNormal, null))
+                else if (indexFloat > 0.5f && indexFloat <= 0.6f)
+                    this.setTextColor(ResourcesCompat.getColor(context.resources, R.color.progressBad, null))
+                else if (indexFloat > 0.6f && indexFloat <= 3f)
+                    this.setTextColor(ResourcesCompat.getColor(context.resources, R.color.progressWorst, null))
+                else
+                    this.setTextColor(ResourcesCompat.getColor(context.resources, R.color.progressError, null))
             }
             // VIRUS
             5 -> {
@@ -160,8 +162,8 @@ class AsTextView(context: Context, attrs: AttributeSet) : AppCompatTextView(cont
                 }
             }
         } else {
-                this.text = "sort option is not grade"
-                this.setTextColor(ResourcesCompat.getColor(context.resources, android.R.color.holo_red_dark, null))
+            this.text = "sort option is not grade"
+            this.setTextColor(ResourcesCompat.getColor(context.resources, android.R.color.holo_red_dark, null))
         }
     }
 }
