@@ -76,16 +76,16 @@ class AsTextView(context: Context, attrs: AttributeSet) : AppCompatTextView(cont
         when(sortResult) {
             // PM
             1 -> {
-                if (index in 0f..15f) {
+                if (index >= 0 && index < 15f) {
                     this.setTextColor(ResourcesCompat.getColor(context.resources, R.color.progressGood, null))
                 }
-                else if (index > 15f && index <= 35f) {
+                else if (index >= 15f && index < 35f) {
                     this.setTextColor(ResourcesCompat.getColor(context.resources, R.color.progressNormal, null))
                 }
-                else if (index > 35f && index <= 75f) {
+                else if (index >= 35f && index < 75f) {
                     this.setTextColor(ResourcesCompat.getColor(context.resources, R.color.progressBad, null))
                 }
-                else if (index > 75f && index <= 100f) {
+                else if (index >= 75f && index < 100f) {
                     this.setTextColor(ResourcesCompat.getColor(context.resources, R.color.progressWorst, null))
                 }
                 else {
@@ -94,39 +94,39 @@ class AsTextView(context: Context, attrs: AttributeSet) : AppCompatTextView(cont
             }
             // CO
             2 -> {
-                if (index in 0f..4.5f)
+                if (index >= 0&& index < 4.5f)
                     this.setTextColor(ResourcesCompat.getColor(context.resources, R.color.progressGood, null))
-                else if (index > 4.5f && index <= 9f)
+                else if (index >= 4.5f && index < 9f)
                     this.setTextColor(ResourcesCompat.getColor(context.resources, R.color.progressNormal, null))
-                else if (index > 9f && index <= 10.8f)
+                else if (index >= 9f && index < 10.8f)
                     this.setTextColor(ResourcesCompat.getColor(context.resources, R.color.progressBad, null))
-                else if (index > 10.8f && index <= 50f)
+                else if (index >= 10.8f && index < 50f)
                     this.setTextColor(ResourcesCompat.getColor(context.resources, R.color.progressWorst, null))
                 else
                     this.setTextColor(ResourcesCompat.getColor(context.resources, R.color.progressError, null))
             }
             // CO2
             3 -> {
-                if (index in 0f..500f)
+                if (index >= 0 && index < 500f)
                     this.setTextColor(ResourcesCompat.getColor(context.resources, R.color.progressGood, null))
-                else if (index > 500f && index <= 1000f)
+                else if (index >= 500f && index < 1000f)
                     this.setTextColor(ResourcesCompat.getColor(context.resources, R.color.progressNormal, null))
-                else if (index > 1000f && index <= 1200f)
+                else if (index >= 1000f && index < 1200f)
                     this.setTextColor(ResourcesCompat.getColor(context.resources, R.color.progressBad, null))
-                else if (index > 1200f && index <= 2000f)
+                else if (index >= 1200f && index < 2000f)
                     this.setTextColor(ResourcesCompat.getColor(context.resources, R.color.progressWorst, null))
                 else
                     this.setTextColor(ResourcesCompat.getColor(context.resources, R.color.progressError, null))
             }
             // TVOC
             4 -> {
-                if (index in 0f..0.25f)
+                if (index >= 0 && index < 0.25f)
                     this.setTextColor(ResourcesCompat.getColor(context.resources, R.color.progressGood, null))
-                else if (index > 0.25f && index <= 0.5f)
+                else if (index >= 0.25f && index < 0.5f)
                     this.setTextColor(ResourcesCompat.getColor(context.resources, R.color.progressNormal, null))
-                else if (index > 0.5f && index <= 0.6f)
+                else if (index >= 0.5f && index < 0.6f)
                     this.setTextColor(ResourcesCompat.getColor(context.resources, R.color.progressBad, null))
-                else if (index > 0.6f && index <= 3f)
+                else if (index >= 0.6f && index < 3f)
                     this.setTextColor(ResourcesCompat.getColor(context.resources, R.color.progressWorst, null))
                 else
                     this.setTextColor(ResourcesCompat.getColor(context.resources, R.color.progressError, null))
