@@ -51,22 +51,15 @@ class AsTextView(context: Context, attrs: AttributeSet) : AppCompatTextView(cont
         val index = index.toFloat()
         val indexInt = index.toInt()
 
-        if (sortResult !in 1..6) {
-            this.text = "error"
-            this.setTextColor(ResourcesCompat.getColor(context.resources, android.R.color.holo_red_light, null))
-        }
+        indexMain(index,indexInt)
         this.text = index.roundToInt().toString()
     }
 
     fun setIndexTextAsFloat(index: Float) {
         this.visibility = VISIBLE
-        val index = index.toFloat()
         val indexInt = index.toInt()
 
-        if (sortResult !in 1..6) {
-            this.text = "error"
-            this.setTextColor(ResourcesCompat.getColor(context.resources, android.R.color.holo_red_light, null))
-        }
+        indexMain(index,indexInt)
         this.text = index.toString()
     }
 
@@ -74,11 +67,8 @@ class AsTextView(context: Context, attrs: AttributeSet) : AppCompatTextView(cont
         this.visibility = VISIBLE
         val index = index.toFloat()
         val indexInt = index.toInt()
+        indexMain(index,indexInt)
 
-        if (sortResult !in 1..6) {
-            this.text = "error"
-            this.setTextColor(ResourcesCompat.getColor(context.resources, android.R.color.holo_red_light, null))
-        }
         this.text = index.toDouble().toString()
     }
     
@@ -161,6 +151,10 @@ class AsTextView(context: Context, attrs: AttributeSet) : AppCompatTextView(cont
                     else -> this.setTextColor(ResourcesCompat.getColor(context.resources, R.color.progressError, null))
                 }
             }
+        }
+        if (sortResult !in 1..6) {
+            this.text = "error"
+            this.setTextColor(ResourcesCompat.getColor(context.resources, android.R.color.holo_red_light, null))
         }
     }
 
