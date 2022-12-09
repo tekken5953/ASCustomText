@@ -147,7 +147,7 @@ class AsTextView(context: Context, attrs: AttributeSet) : AppCompatTextView(cont
                 }
             }
         }
-        if (sortResult !in 1..5) {
+        if (sortResult !in 1..6) {
             this.text = "error"
             this.setTextColor(ResourcesCompat.getColor(context.resources, android.R.color.holo_red_light, null))
             Log.e(javaClass.name,"sort option is not index")

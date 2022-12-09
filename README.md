@@ -53,7 +53,15 @@ dependencies {
   ```
 
   ```
-  asTextView.setIndexText(String);		 sort가 grade가 아닐 때 공기질의 수치를 설정하는 메서드
+  asTextView.setIndexTextAsInt(Float);		 sort가 grade가 아닐 때 공기질의 수치를 Integer형으로 설정하고 메서드
+  ```
+
+  ```
+  asTextView.setIndexTextAsFloat(Float);		 sort가 grade가 아닐 때 공기질의 수치를 Float형으로 설정하고 메서드
+  ```
+
+  ```
+  asTextView.setIndexTextAsDouble(Float);		 sort가 grade가 아닐 때 공기질의 수치를 Double형으로 설정하고 메서드
   ```
 
   ```
