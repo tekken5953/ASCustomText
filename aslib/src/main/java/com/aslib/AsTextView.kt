@@ -7,6 +7,7 @@ import android.util.AttributeSet
 import android.util.Log
 import androidx.appcompat.widget.AppCompatTextView
 import androidx.core.content.res.ResourcesCompat
+import kotlin.math.roundToInt
 
 @SuppressLint("Recycle","CustomViewStyleable")
 class AsTextView(context: Context, attrs: AttributeSet) : AppCompatTextView(context,attrs) {
@@ -54,7 +55,31 @@ class AsTextView(context: Context, attrs: AttributeSet) : AppCompatTextView(cont
             this.text = "error"
             this.setTextColor(ResourcesCompat.getColor(context.resources, android.R.color.holo_red_light, null))
         }
-        this.text = index.toInt()
+        this.text = index.roundToInt().toString()
+    }
+
+    fun setIndexTextAsFloat(index: Float) {
+        this.visibility = VISIBLE
+        val index = index.toFloat()
+        val indexInt = index.toInt()
+
+        if (sortResult !in 1..6) {
+            this.text = "error"
+            this.setTextColor(ResourcesCompat.getColor(context.resources, android.R.color.holo_red_light, null))
+        }
+        this.text = index.toString()
+    }
+
+    fun setIndexTextAsDouble(index: Float) {
+        this.visibility = VISIBLE
+        val index = index.toFloat()
+        val indexInt = index.toInt()
+
+        if (sortResult !in 1..6) {
+            this.text = "error"
+            this.setTextColor(ResourcesCompat.getColor(context.resources, android.R.color.holo_red_light, null))
+        }
+        this.text = index.toDouble().toString()
     }
     
     private fun indexMain(index: Float, indexInt: Int) {
