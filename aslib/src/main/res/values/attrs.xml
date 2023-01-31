@@ -9,6 +9,8 @@
             <enum name="tvoc" value="4"/>
             <enum name="virus" value="5"/>
             <enum name="cqi" value="6"/>
+            <enum name="temp" value="7"/>
+            <enum name="humid" value="8"/>
         </attr>
     </declare-styleable>
 </resources>

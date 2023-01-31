@@ -30,6 +30,8 @@ class AsTextView(context: Context, attrs: AttributeSet) : AppCompatTextView(cont
             "tvoc" -> {sortResult = 4}
             "virus" -> {sortResult = 5}
             "cqi" -> {sortResult = 6}
+            "temp" -> {sortResult = 7}
+            "humid" -> {sortResult = 8}
         }
     }
 
@@ -42,13 +44,15 @@ class AsTextView(context: Context, attrs: AttributeSet) : AppCompatTextView(cont
             4 -> {return "tvoc"}
             5 -> {return "virus"}
             6 -> {return "cqi"}
+            7 -> {return "temp"}
+            8 -> {return "humid"}
         }
         return "nothing"
     }
 
     fun setIndexTextAsInt(index: Float) {
         this.visibility = VISIBLE
-        val index = index.toFloat()
+        val index = index
         val indexInt = index.toInt()
 
         indexMain(index,indexInt)
@@ -65,13 +69,14 @@ class AsTextView(context: Context, attrs: AttributeSet) : AppCompatTextView(cont
 
     fun setIndexTextAsDouble(index: Float) {
         this.visibility = VISIBLE
-        val index = index.toFloat()
+        val index = index
         val indexInt = index.toInt()
         indexMain(index,indexInt)
 
         this.text = index.toDouble().toString()
     }
     
+    @SuppressLint("SetTextI18n")
     private fun indexMain(index: Float, indexInt: Int) {
         when(sortResult) {
             // PM
@@ -151,8 +156,13 @@ class AsTextView(context: Context, attrs: AttributeSet) : AppCompatTextView(cont
                     else -> this.setTextColor(ResourcesCompat.getColor(context.resources, R.color.progressError, null))
                 }
             }
+
+            // TEMP or HUMID
+            7 or 8 -> {
+                this.setTextColor(ResourcesCompat.getColor(context.resources, R.color.progressGood, null))
+            }
         }
-        if (sortResult !in 1..6) {
+        if (sortResult !in 1..8) {
             this.text = "error"
             this.setTextColor(ResourcesCompat.getColor(context.resources, android.R.color.holo_red_light, null))
         }
