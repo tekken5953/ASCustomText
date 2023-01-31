@@ -157,10 +157,16 @@ class AsTextView(context: Context, attrs: AttributeSet) : AppCompatTextView(cont
                 }
             }
 
-            // TEMP or HUMID
-            7 or 8 -> {
+            // TEMP
+            7 -> {
                 this.setTextColor(ResourcesCompat.getColor(context.resources, R.color.progressGood, null))
             }
+
+            // HUMID
+            8 -> {
+                this.setTextColor(ResourcesCompat.getColor(context.resources, R.color.progressGood, null))
+            }
+
         }
         if (sortResult !in 1..8) {
             this.text = "error"

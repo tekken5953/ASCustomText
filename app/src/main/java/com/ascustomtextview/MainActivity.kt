@@ -11,8 +11,8 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         val asTextView: AsTextView = findViewById(R.id.asTextView)
-        asTextView.setSort("cqi")
-        asTextView.setIndexTextAsInt(40f)
+        asTextView.setSort("temp")
+        asTextView.setIndexTextAsInt(40.5f)
         Toast.makeText(this, asTextView.getSort(), Toast.LENGTH_SHORT).show();
     }
 }
