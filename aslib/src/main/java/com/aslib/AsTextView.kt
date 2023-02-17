@@ -50,13 +50,12 @@ class AsTextView(context: Context, attrs: AttributeSet) : AppCompatTextView(cont
         return "nothing"
     }
 
-    fun setIndexTextAsInt(index: Float) {
+    fun setIndexTextAsInt(mIndex: Float) {
         this.visibility = VISIBLE
-        val index = index
-        val indexInt = index.toInt()
+        val indexInt = mIndex.toInt()
 
-        indexMain(index,indexInt)
-        this.text = index.roundToInt().toString()
+        indexMain(mIndex, indexInt)
+        this.text = mIndex.roundToInt().toString()
     }
 
     fun setIndexTextAsFloat(index: Float) {
@@ -67,13 +66,12 @@ class AsTextView(context: Context, attrs: AttributeSet) : AppCompatTextView(cont
         this.text = index.toString()
     }
 
-    fun setIndexTextAsDouble(index: Float) {
+    fun setIndexTextAsDouble(mIndex: Float) {
         this.visibility = VISIBLE
-        val index = index
-        val indexInt = index.toInt()
-        indexMain(index,indexInt)
+        val indexInt = mIndex.toInt()
+        indexMain(mIndex, indexInt)
 
-        this.text = index.toDouble().toString()
+        this.text = mIndex.toDouble().toString()
     }
     
     @SuppressLint("SetTextI18n")
