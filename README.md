@@ -31,7 +31,7 @@ dependencies {
         android:id="@+id/asTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-	<!-- sort : ["grade","pm","co","co2","tvoc","virus","cqi"] -->
+	<!-- sort : ["grade","pm","co","co2","tvoc","virus","cqi","temp","humid"] -->
         app:sort="grade"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
