@@ -44,7 +44,7 @@ dependencies {
 
   ```
   asTextView.setSort(String);			  텍스트뷰의 sort를 설정하는 메서드
-  						  ["grade","pm","co","co2","tvoc","virus","cqi"]
+  						  ["grade","pm","co","co2","tvoc","virus","cqi""temp","humid"]
   ```
 
   ```
