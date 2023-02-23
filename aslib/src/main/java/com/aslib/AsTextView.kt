@@ -97,7 +97,7 @@ class AsTextView(context: Context, attrs: AttributeSet) : AppCompatTextView(cont
             }
             // CO
             2 -> {
-                if (index >= 0&& index < 4.5f)
+                if (index >= 0 && index < 4.5f)
                     this.setTextColor(ResourcesCompat.getColor(context.resources, R.color.progressGood, null))
                 else if (index >= 4.5f && index < 9f)
                     this.setTextColor(ResourcesCompat.getColor(context.resources, R.color.progressNormal, null))
