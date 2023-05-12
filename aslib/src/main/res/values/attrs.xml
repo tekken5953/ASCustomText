@@ -3,7 +3,7 @@
     <declare-styleable name="AsTextView">
         <attr name="sort" format="string">
             <enum name="grade" value="0"/>
-            <enum name="pm" value="1"/>
+            <enum name="pm2.5" value="1"/>
             <enum name="co" value="2"/>
             <enum name="co2" value="3"/>
             <enum name="tvoc" value="4"/>
@@ -11,6 +11,7 @@
             <enum name="cqi" value="6"/>
             <enum name="temp" value="7"/>
             <enum name="humid" value="8"/>
+            <enum name="pm10" value="9"/>
         </attr>
     </declare-styleable>
 </resources>

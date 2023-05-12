@@ -24,7 +24,7 @@ class AsTextView(context: Context, attrs: AttributeSet) : AppCompatTextView(cont
     fun setSort(sort: String) {
         when(sort.lowercase()) {
             "grade" -> {sortResult = 0}
-            "pm" -> {sortResult = 1}
+            "pm2.5" -> {sortResult = 1}
             "co" -> {sortResult = 2}
             "co2" -> {sortResult = 3}
             "tvoc" -> {sortResult = 4}
@@ -32,13 +32,14 @@ class AsTextView(context: Context, attrs: AttributeSet) : AppCompatTextView(cont
             "cqi" -> {sortResult = 6}
             "temp" -> {sortResult = 7}
             "humid" -> {sortResult = 8}
+            "pm10" -> {sortResult = 9}
         }
     }
 
     fun getSort(): String {
         when(sortResult) {
             0 -> {return "grade"}
-            1 -> {return "pm"}
+            1 -> {return "pm2.5"}
             2 -> {return "co"}
             3 -> {return "co2"}
             4 -> {return "tvoc"}
@@ -46,6 +47,7 @@ class AsTextView(context: Context, attrs: AttributeSet) : AppCompatTextView(cont
             6 -> {return "cqi"}
             7 -> {return "temp"}
             8 -> {return "humid"}
+            9 -> {return "pm10"}
         }
         return "nothing"
     }
@@ -77,7 +79,7 @@ class AsTextView(context: Context, attrs: AttributeSet) : AppCompatTextView(cont
     @SuppressLint("SetTextI18n")
     private fun indexMain(index: Float, indexInt: Int) {
         when(sortResult) {
-            // PM
+            // PM2.5
             1 -> {
                 if (index >= 0 && index < 15f) {
                     this.setTextColor(ResourcesCompat.getColor(context.resources, R.color.progressGood, null))
@@ -88,7 +90,7 @@ class AsTextView(context: Context, attrs: AttributeSet) : AppCompatTextView(cont
                 else if (index >= 35f && index < 75f) {
                     this.setTextColor(ResourcesCompat.getColor(context.resources, R.color.progressBad, null))
                 }
-                else if (index >= 75f && index < 100f) {
+                else if (index >= 75f) {
                     this.setTextColor(ResourcesCompat.getColor(context.resources, R.color.progressWorst, null))
                 }
                 else {
@@ -163,6 +165,24 @@ class AsTextView(context: Context, attrs: AttributeSet) : AppCompatTextView(cont
             // HUMID
             8 -> {
                 this.setTextColor(ResourcesCompat.getColor(context.resources, R.color.progressGood, null))
+            }
+            // PM10
+            9 -> {
+                if (index in 0.0..30.0) {
+                    this.setTextColor(ResourcesCompat.getColor(context.resources, R.color.progressGood, null))
+                }
+                else if (index > 30f && index <= 80f) {
+                    this.setTextColor(ResourcesCompat.getColor(context.resources, R.color.progressNormal, null))
+                }
+                else if (index > 80f && index <= 150f) {
+                    this.setTextColor(ResourcesCompat.getColor(context.resources, R.color.progressBad, null))
+                }
+                else if (index > 150f) {
+                    this.setTextColor(ResourcesCompat.getColor(context.resources, R.color.progressWorst, null))
+                }
+                else {
+                    this.setTextColor(ResourcesCompat.getColor(context.resources, R.color.progressError, null))
+                }
             }
 
         }
