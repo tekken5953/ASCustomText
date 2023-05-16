@@ -161,7 +161,6 @@ class AsTextView(context: Context, attrs: AttributeSet) : AppCompatTextView(cont
             7 -> {
                 this.setTextColor(ResourcesCompat.getColor(context.resources, R.color.progressGood, null))
             }
-
             // HUMID
             8 -> {
                 this.setTextColor(ResourcesCompat.getColor(context.resources, R.color.progressGood, null))
@@ -184,9 +183,8 @@ class AsTextView(context: Context, attrs: AttributeSet) : AppCompatTextView(cont
                     this.setTextColor(ResourcesCompat.getColor(context.resources, R.color.progressError, null))
                 }
             }
-
         }
-        if (sortResult !in 1..8) {
+        if (sortResult !in 1..9) {
             this.text = "error"
             this.setTextColor(ResourcesCompat.getColor(context.resources, android.R.color.holo_red_light, null))
         }
