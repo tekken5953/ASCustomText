@@ -119,28 +119,98 @@ class AsTextView(context: Context, attrs: AttributeSet) : AppCompatTextView(cont
     fun getPM25GradeFromValue(index: Int) {
         return if (index >= 0 && index < 15f) {
             this.text = context.getString(R.string.good)
+            this.setTextColor(
+                ResourcesCompat.getColor(
+                    context.resources,
+                    R.color.progressGood,
+                    null
+                )
+            )
         } else if (index >= 15f && index < 35f) {
             this.text = context.getString(R.string.normal)
+            this.setTextColor(
+                ResourcesCompat.getColor(
+                    context.resources,
+                    R.color.progressNormal,
+                    null
+                )
+            )
         } else if (index >= 35f && index < 75f) {
             this.text = context.getString(R.string.bad)
+            this.setTextColor(
+                ResourcesCompat.getColor(
+                    context.resources,
+                    R.color.progressBad,
+                    null
+                )
+            )
         } else if (index >= 75f) {
             this.text = context.getString(R.string.very_bad)
+            this.setTextColor(
+                ResourcesCompat.getColor(
+                    context.resources,
+                    R.color.progressWorst,
+                    null
+                )
+            )
         } else {
             this.text = context.getString(R.string.error)
+            this.setTextColor(
+                ResourcesCompat.getColor(
+                    context.resources,
+                    R.color.progressError,
+                    null
+                )
+            )
         }
     }
 
     fun getPM10GradeFromValue(index: Int) {
         return if (index in 0..30) {
             this.text = context.getString(R.string.good)
+            this.setTextColor(
+                ResourcesCompat.getColor(
+                    context.resources,
+                    R.color.progressGood,
+                    null
+                )
+            )
         } else if (index > 30f && index <= 80f) {
             this.text = context.getString(R.string.normal)
+            this.setTextColor(
+                ResourcesCompat.getColor(
+                    context.resources,
+                    R.color.progressNormal,
+                    null
+                )
+            )
         } else if (index > 80f && index <= 150f) {
             this.text = context.getString(R.string.bad)
+            this.setTextColor(
+                ResourcesCompat.getColor(
+                    context.resources,
+                    R.color.progressBad,
+                    null
+                )
+            )
         } else if (index > 150f) {
             this.text = context.getString(R.string.very_bad)
+            this.setTextColor(
+                ResourcesCompat.getColor(
+                    context.resources,
+                    R.color.progressWorst,
+                    null
+                )
+            )
         } else {
             this.text = context.getString(R.string.error)
+            this.setTextColor(
+                ResourcesCompat.getColor(
+                    context.resources,
+                    R.color.progressError,
+                    null
+                )
+            )
         }
     }
 
