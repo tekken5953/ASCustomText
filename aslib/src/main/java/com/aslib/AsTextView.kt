@@ -75,6 +75,38 @@ class AsTextView(context: Context, attrs: AttributeSet) : AppCompatTextView(cont
 
         this.text = mIndex.toDouble().toString()
     }
+
+    fun getPM25GradeFromValue(index: Double): String {
+        return if (index >= 0 && index < 15f) {
+            context.getString(R.string.good)
+        } else if (index >= 15f && index < 35f) {
+            context.getString(R.string.normal)
+        } else if (index >= 35f && index < 75f) {
+            context.getString(R.string.bad)
+        } else if (index >= 75f) {
+            context.getString(R.string.very_bad)
+        } else {
+            context.getString(R.string.error)
+        }
+    }
+
+    fun getPM10GradeFromValue(index: Double): String {
+        return if (index in 0.0..30.0) {
+            context.getString(R.string.good)
+        }
+        else if (index > 30f && index <= 80f) {
+            context.getString(R.string.normal)
+        }
+        else if (index > 80f && index <= 150f) {
+            context.getString(R.string.bad)
+        }
+        else if (index > 150f) {
+            context.getString(R.string.very_bad)
+        }
+        else {
+            context.getString(R.string.error)
+        }
+    }
     
     @SuppressLint("SetTextI18n")
     private fun indexMain(index: Float, indexInt: Int) {
