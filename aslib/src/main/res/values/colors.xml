@@ -13,4 +13,10 @@
     <color name="progressGood">#5CC2E4</color> // 프로그래스 바 양호도 좋음 컬러
     <color name="progressNormal">#1ccf7f</color> // 프로그래스 바 양호도 보통 컬러
     <color name="progressError">#A0A0A0</color> // 프로그래스 바 에러 컬러
+
+    <color name="pmGood">#22D3EE</color>
+    <color name="pmNormal">#4DCF7D</color>
+    <color name="pmBad">#FACC15</color>
+    <color name="pmVeryBad">#F87171</color>
+    <color name="pmError">#A0A0A0</color>
 </resources>

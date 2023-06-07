@@ -122,7 +122,7 @@ class AsTextView(context: Context, attrs: AttributeSet) : AppCompatTextView(cont
             this.setTextColor(
                 ResourcesCompat.getColor(
                     context.resources,
-                    R.color.progressGood,
+                    R.color.pmGood,
                     null
                 )
             )
@@ -131,7 +131,7 @@ class AsTextView(context: Context, attrs: AttributeSet) : AppCompatTextView(cont
             this.setTextColor(
                 ResourcesCompat.getColor(
                     context.resources,
-                    R.color.progressNormal,
+                    R.color.pmNormal,
                     null
                 )
             )
@@ -140,7 +140,7 @@ class AsTextView(context: Context, attrs: AttributeSet) : AppCompatTextView(cont
             this.setTextColor(
                 ResourcesCompat.getColor(
                     context.resources,
-                    R.color.progressBad,
+                    R.color.pmBad,
                     null
                 )
             )
@@ -149,7 +149,7 @@ class AsTextView(context: Context, attrs: AttributeSet) : AppCompatTextView(cont
             this.setTextColor(
                 ResourcesCompat.getColor(
                     context.resources,
-                    R.color.progressWorst,
+                    R.color.pmVeryBad,
                     null
                 )
             )
@@ -158,7 +158,7 @@ class AsTextView(context: Context, attrs: AttributeSet) : AppCompatTextView(cont
             this.setTextColor(
                 ResourcesCompat.getColor(
                     context.resources,
-                    R.color.progressError,
+                    R.color.pmError,
                     null
                 )
             )
@@ -171,7 +171,7 @@ class AsTextView(context: Context, attrs: AttributeSet) : AppCompatTextView(cont
             this.setTextColor(
                 ResourcesCompat.getColor(
                     context.resources,
-                    R.color.progressGood,
+                    R.color.pmGood,
                     null
                 )
             )
@@ -180,7 +180,7 @@ class AsTextView(context: Context, attrs: AttributeSet) : AppCompatTextView(cont
             this.setTextColor(
                 ResourcesCompat.getColor(
                     context.resources,
-                    R.color.progressNormal,
+                    R.color.pmNormal,
                     null
                 )
             )
@@ -189,7 +189,7 @@ class AsTextView(context: Context, attrs: AttributeSet) : AppCompatTextView(cont
             this.setTextColor(
                 ResourcesCompat.getColor(
                     context.resources,
-                    R.color.progressBad,
+                    R.color.pmBad,
                     null
                 )
             )
@@ -198,7 +198,7 @@ class AsTextView(context: Context, attrs: AttributeSet) : AppCompatTextView(cont
             this.setTextColor(
                 ResourcesCompat.getColor(
                     context.resources,
-                    R.color.progressWorst,
+                    R.color.pmVeryBad,
                     null
                 )
             )
@@ -207,7 +207,7 @@ class AsTextView(context: Context, attrs: AttributeSet) : AppCompatTextView(cont
             this.setTextColor(
                 ResourcesCompat.getColor(
                     context.resources,
-                    R.color.progressError,
+                    R.color.pmError,
                     null
                 )
             )
@@ -223,7 +223,7 @@ class AsTextView(context: Context, attrs: AttributeSet) : AppCompatTextView(cont
                     this.setTextColor(
                         ResourcesCompat.getColor(
                             context.resources,
-                            R.color.progressGood,
+                            R.color.pmGood,
                             null
                         )
                     )
@@ -231,7 +231,7 @@ class AsTextView(context: Context, attrs: AttributeSet) : AppCompatTextView(cont
                     this.setTextColor(
                         ResourcesCompat.getColor(
                             context.resources,
-                            R.color.progressNormal,
+                            R.color.pmNormal,
                             null
                         )
                     )
@@ -239,7 +239,7 @@ class AsTextView(context: Context, attrs: AttributeSet) : AppCompatTextView(cont
                     this.setTextColor(
                         ResourcesCompat.getColor(
                             context.resources,
-                            R.color.progressBad,
+                            R.color.pmBad,
                             null
                         )
                     )
@@ -247,7 +247,7 @@ class AsTextView(context: Context, attrs: AttributeSet) : AppCompatTextView(cont
                     this.setTextColor(
                         ResourcesCompat.getColor(
                             context.resources,
-                            R.color.progressWorst,
+                            R.color.pmVeryBad,
                             null
                         )
                     )
@@ -255,7 +255,7 @@ class AsTextView(context: Context, attrs: AttributeSet) : AppCompatTextView(cont
                     this.setTextColor(
                         ResourcesCompat.getColor(
                             context.resources,
-                            R.color.progressError,
+                            R.color.pmError,
                             null
                         )
                     )
@@ -497,7 +497,7 @@ class AsTextView(context: Context, attrs: AttributeSet) : AppCompatTextView(cont
                     this.setTextColor(
                         ResourcesCompat.getColor(
                             context.resources,
-                            R.color.progressGood,
+                            R.color.pmGood,
                             null
                         )
                     )
@@ -505,7 +505,7 @@ class AsTextView(context: Context, attrs: AttributeSet) : AppCompatTextView(cont
                     this.setTextColor(
                         ResourcesCompat.getColor(
                             context.resources,
-                            R.color.progressNormal,
+                            R.color.pmNormal,
                             null
                         )
                     )
@@ -513,7 +513,7 @@ class AsTextView(context: Context, attrs: AttributeSet) : AppCompatTextView(cont
                     this.setTextColor(
                         ResourcesCompat.getColor(
                             context.resources,
-                            R.color.progressBad,
+                            R.color.pmBad,
                             null
                         )
                     )
@@ -521,7 +521,7 @@ class AsTextView(context: Context, attrs: AttributeSet) : AppCompatTextView(cont
                     this.setTextColor(
                         ResourcesCompat.getColor(
                             context.resources,
-                            R.color.progressWorst,
+                            R.color.pmVeryBad,
                             null
                         )
                     )
@@ -529,7 +529,7 @@ class AsTextView(context: Context, attrs: AttributeSet) : AppCompatTextView(cont
                     this.setTextColor(
                         ResourcesCompat.getColor(
                             context.resources,
-                            R.color.progressError,
+                            R.color.pmError,
                             null
                         )
                     )
